@@ -4,6 +4,7 @@ const productmodel = require("./../model/product.model");
 
 //--------------------create new product admin--------------------------
 exports.createProduct = async (req, res, next) => {
+    req.body.user = req.user.id
     const product = await productmodel.create(req.body);
     res.status(200).json({ succes: true, product });
 
