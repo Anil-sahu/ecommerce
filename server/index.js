@@ -11,5 +11,5 @@ app.get("/api/product", (req, res) => {
 dbconnect();
 
 app.listen(port,
-    () => { console.log("My server is running at port :", port) }
+    () => { console.log("Server is running at port :", port) }
 );
